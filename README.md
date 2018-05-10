@@ -2,7 +2,6 @@ Authors:
   Eduardo Berg
   Logan Lawrence
   
-==============
 GENERAL NOTES:
 ==============
 
@@ -15,7 +14,6 @@ This project required two meter-long APA102-C RGB LED strips, an MSP430 microcon
 
 Also make sure to check out the code we used to make this happen :)
 
-=====
 CODE:
 =====
 
