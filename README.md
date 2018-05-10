@@ -8,14 +8,14 @@ We first thought of doing this as our final project, but with permission for the
 Our bike system's purpose is to display different colors depending on how fast the user is riding, and upon stopping, displays a unique animation. 
 Check out our video of the result: https://youtu.be/eMoFD-dRQzU.
 
-This project required one Hall effect sensor - US5881LUA (https://www.adafruit.com/product/158), two meter-long APA102-C RGB LED strips, an MSP430 microcontroller, and several battery units (as well as a working bicycle, of course).
+This project required one Hall effect sensor - US5881LUA (https://www.adafruit.com/product/158), a few Neodymium magnetstwo meter-long APA102-C RGB LED strips, an MSP430 microcontroller, and several battery units (as well as a working bicycle, of course).
 
 Also make sure to check out the code we used to make this happen :)
 
 DESIGN:
 =======
 
-**_Basic Ideology_**: Our main goal was to use a 
+**_Basic Ideology_**: Our main goal was to use a Hall effect sensor in tandem while Neodymium magnets to create a dynamic system where the color of the LED strips placed on the bike would change in accordance with the current speed of the user (in addition to some unique procedures for stopping and starting). The magnets themselves are to be placed on the inner wheel of the bike, so that the sensor is able to record eveyr revolution of the wheel. The sensor itself is recommended to be as close to the magnet as possible, where for example our Hall effect sensor was placed on the fork of the bike resting just around the inner wheel. Additionally, the LED strips and battery components can be placed anywhere on the bike, we simply just chose to put them on the top and down tubes. This system can be easily resued, where for example a system can be made where the slower the user goes, the more red the LEDs become, effectively becoming a stop light.
 
 **_PCB and MSP430 Power_**: Unfortunately, since this was a last minute extra credt project, we didn't order a PCB specifically designed for our system. However, we were able to repurpose our mood ring lab from halfway through the semester to suit our needs. Since the LED array is powered externally through AA batteries, there was only need to send the sensor's signal to the MSP430, and take that interpreted signal and relay it to the LEDs. For this reason, we had a seperate power source for the MSP430 and sensor, which were both on the makeshift PCB.
 
