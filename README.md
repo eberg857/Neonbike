@@ -19,7 +19,7 @@ DESIGN:
 
 **_PCB and MSP430 Power_**: Unfortunately, since this was a last minute extra credt project, we didn't order a PCB specifically designed for our system. However, we were able to repurpose our mood ring lab from halfway through the semester to suit our needs. Since the LED array is powered externally through AA batteries, there was only need to send the sensor's signal to the MSP430, and take that interpreted signal and relay it to the LEDs. For this reason, we had a seperate power source for the MSP430 and sensor, which were both on the makeshift PCB.
 
-**_Configuring LED Chains_**:From there, the the data and clock signals were sent to the LED chain, which used a power source of their own. There were two sepearte LED strips used. Each which used a pack of AA battery holders, which had 2 AA batteries, in total using 4 AA batteries. From there we simply connected the data and clock signals from the first LED strips to the second LED strip.
+**_Configuring LED Chains_**: From there, the the data and clock signals were sent to the LED chain, which used a power source of their own. There were two sepearte LED strips used. Each which used a pack of AA battery holders, which had 2 AA batteries, in total using 4 AA batteries. From there we simply connected the data and clock signals from the first LED strips to the second LED strip.
 
 CODE:
 =====
