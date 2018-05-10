@@ -15,9 +15,9 @@ Also make sure to check out the code we used to make this happen :)
 DESIGN:
 =======
 
-Unfortunately, since this was a last minute extra credt project, we didn't order a PCB specifically designed for our system. However, we were able to repurpose our mood ring lab from halfway through the semester to suit our needs. Since the LED array is powered externally through AA batteries, there was only need to send the sensor's signal to the MSP430, and take that interpreted signal and relay it to the LEDs. For this reason, we had a seperate power source for the MSP430 and sensor, which were both on the makeshift PCB.
+**_PCB and MSP430 Power_**: Unfortunately, since this was a last minute extra credt project, we didn't order a PCB specifically designed for our system. However, we were able to repurpose our mood ring lab from halfway through the semester to suit our needs. Since the LED array is powered externally through AA batteries, there was only need to send the sensor's signal to the MSP430, and take that interpreted signal and relay it to the LEDs. For this reason, we had a seperate power source for the MSP430 and sensor, which were both on the makeshift PCB.
 
-From there, the the data and clock signals were sent to the LED chain, which used a power source of their own. There were two sepearte LED strips used. Each which used a pack of AA battery holders, which had 2 AA batteries. We simply split up the data and clock signal from 
+**_Configuring LED Chains_**:From there, the the data and clock signals were sent to the LED chain, which used a power source of their own. There were two sepearte LED strips used. Each which used a pack of AA battery holders, which had 2 AA batteries. We simply split up the data and clock signal from 
 
 CODE:
 =====
@@ -28,4 +28,4 @@ All of the bike logic occurs in the infinite while loop of the main function. In
 
 **_Interpreting Sesnor Values_**: The bottom half of the infinite while loop deals solely with interpreting the values from the Hall effect sensor. Even though the sensor itself was reliable enough (meaning that it would consistently display the same values when in proximity to a magnet and had a reliable boundary for when it was not), there was one other small challenge that presented itself. This problem in essence was that 
 
-**_About the Logic_**: Since we wanted the polling speed of the hall effect sensor to be very high to ensure that the sensor picked up each revolution of the wheel (where the actual speed of the magnet is moving around 2 m/s), the data that's pushed to the LED array is changed dynamically. By this, we mean that on every iteration of the 
+**_About the Logic_**: Since we wanted the polling speed of the hall effect sensor to be very high to ensure that the sensor picked up each revolution of the wheel (where the actual speed of the magnet is moving around 2 m/s), the data that's pushed to the LED array is changed dynamically. By this, we mean that on every iteration of the while loop, only one new char is trasmitted. 
